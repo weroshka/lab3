@@ -31,7 +31,7 @@ function getFiles($dir)
 }
 
 $files = getFiles('ads');
-foreach ($files as $key => $file) { //в массив $files попадают все директории, оставляем только те, которые являются объявлениями, они записаны в виде категория/электронная почта/заголовок
+foreach ($files as $key => $file) {
     if (substr_count($file, '/') != 3) {
         unset($files[$key]);
     }
